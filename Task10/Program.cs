@@ -7,6 +7,10 @@
 
 Console.Clear();
 Console.WriteLine("Введите трёхзначное число");
-int num = Convert.ToInt32(Console.ReadLine());   
-num=num/10%10;
-Console.WriteLine($"{num}");
+int num = Convert.ToInt32(Console.ReadLine()); 
+if (num > 999 || num < 100 )  Console.WriteLine("Введено не трёхзначное число");
+else 
+{
+    num=num/10%10;
+    Console.WriteLine($"{num}");
+}
